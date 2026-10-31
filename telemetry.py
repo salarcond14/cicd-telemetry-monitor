@@ -6,7 +6,7 @@ from datetime import datetime
 # --- CONFIGURACIÓN ---
 GITHUB_USER = "salarcond14"          # Ej. "SantiagoAlarcon"
 REPO_NAME = "cicd-telemetry-monitor"          # El repositorio que creamos
-TOKEN = os.getenv("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") or input("Ingresa tu GitHub Token: ")
+TOKEN = os.getenv("GITHUB_TOKEN") or input("Ingresa tu GitHub Token: ").strip()
 # Configuración de cabeceras HTTP exigidas por la API de GitHub
 headers = {
     "Authorization": f"Bearer {TOKEN}",
